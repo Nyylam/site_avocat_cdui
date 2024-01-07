@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 1000px;
+    background: white;
+    font-size: 16px;
+}
+
+#haut {
+    height: 90px;
+    background: #2D2D2F;
+    color: #FFAA33;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+
+#haut h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+}
+
+#image img {
+    width: 1000px;
+    height: 380px;
+    display: block;
+    margin: auto;
+}
+
+#colonnes {
+    display: flex;
+}
+
+#gauche {
+    min-height: 500px;
+    width: 750px;
+    background: #cccccc;
+    padding: 20px;
+}
+
+#gauche p {
+    column-count: 2;
+    column-gap: 11px;
+    text-align: justify;
+}
+
+#gauche img {
+    display: block;
+    margin: auto;
+}
+
+#droite {
+    min-height: 500px;
+    width: 250px;
+    background: #ffaa33;
+    padding: 10px;
+}
+
+#droite ul li a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #2d2d2f;
+    background-color: transparent;
+    border: 1px solid #2d2d2f;
+    border-radius: 2px; 
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#droite ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+#droite ul li:last-child a {
+    margin-bottom: 40px; 
+}
+
+#droite ul li a:hover {
+    background-color: #2d2d2f;
+    color: #ffaa33;
+}
+
+#bas {
+    height: 50px;
+    background: #2D2D2F;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* PAGE CONTACT */
+
+#gauche form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#gauche form input,
+#gauche form textarea {
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 8px;
+    margin-top: 6px; 
+    box-sizing: border-box;
+}
+
+
+
+
+/* VERSION MOBILE */
+
+@media all and (max-width: 600px) {
+    body {
+        width: 100%;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #image {
+        display: none;
+    }
+
+    #colonnes {
+        flex-direction: column;
+    }
+
+    #gauche,
+    #droite {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #gauche {
+        padding: 20px;
+        margin-bottom: 0;
+
+    }
+
+    #droite {
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    #gauche p {
+        column-count: 1;
+        column-gap: 20px;
+        text-align: left;
+    }
+
+    #haut {
+        padding-left: 20px; 
+    }
+}
